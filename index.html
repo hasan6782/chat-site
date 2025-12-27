@@ -74,6 +74,9 @@
 
 <div class="chat-box">
   <h2>💬 FriendChat</h2>
+<button onclick="clearChat()" style="margin-bottom:5px;background:#ef4444;color:white;">
+  مسح الشات
+</button>
 
 
   <input id="name" placeholder="اسمك" style="margin-bottom:5px; font-size:12px; padding:6px;">
@@ -87,7 +90,11 @@
   </div>
 </div>
 
-<script>
+<script>    function clearChat(){
+  document.getElementById("chat").innerHTML = "";
+}  
+  <audio id="sendSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+document.getElementById("sendSound").play();
 function send(){
   var name = document.getElementById("name").value;
   var msg = document.getElementById("msg").value;
@@ -105,4 +112,5 @@ function send(){
 
 </body>
 </html>
+
 
